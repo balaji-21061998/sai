@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Set the directory path
+directory="/home/ec2-user/scripts"
+
+# Check if the directory exists
+if [ -d "$directory" ]; then
+    echo "Directory already exists: $directory"
+else
+    # Create the directory
+    mkdir -p "$directory"
+    if [ $? -eq 0 ]; then
+        echo "Directory created successfully: $directory"
+    else
+        echo "Failed to create directory: $directory"
+    fi
+fi
+
